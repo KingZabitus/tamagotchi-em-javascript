@@ -30,10 +30,25 @@ function Loop(time = 2) {
     }
 
     fome = fome - parseInt(time);
+    if (fome < 0) {
+        fome = 0;
+    }
     higiene = higiene - parseInt(time);
+    if (higiene < 0) {
+        higiene = 0;
+    }
     sono = sono - parseInt(time);
+    if (sono < 0) {
+        sono = 0;
+    }
     diversao = diversao - parseInt(time);
+    if (diversao < 0) {
+        diversao = 0;
+    }
     social = social - parseInt(time);
+    if (social < 0) {
+        social = 0;
+    }
 
     document.getElementById("fome").innerHTML = fome + '%';
     document.getElementById("higiene").innerHTML = higiene + '%';
