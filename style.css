@@ -30,7 +30,7 @@ body {
     background: #777;
 }
 
-.barra{
+.barra {
     width: 100px;
     background: #99cc00;
     margin: 5px 10px;
@@ -42,19 +42,86 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    }
+}
 
-#ButtBlock{
+#ButtBlock {
     padding: 15px 0px;
 }
 
-#imageBlock{
+#imageBlock {
     padding: 0px 0px;
     position: relative;
     left: 200px;
     top: 100px;
 }
 
-#mensagem{
+#mensagem {
     color: red;
+}
+
+#barraTreino {
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    width: 500px;
+    height: 10px;
+    background-color: blue;
+}
+
+#medidor {
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    width: 10px;
+    height: 15px;
+    background-color: green;
+}
+
+.brincarContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.botaoDeTesoura {
+    position: absolute;
+    left: 35%;
+    bottom: 50%;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    background-color: #aaa;
+    background-image: url('path/to/pedra.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.botaoDePapel {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    background-color: #aaa;
+    background-image: url('path/to/pedra.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.botaoDePedra {
+    position: absolute;
+    left: 65%;
+    bottom: 50%;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    background-color: #aaa;
+    background-image: url('path/to/pedra.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
