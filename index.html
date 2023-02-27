@@ -1,39 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Bichinho Virtual</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Bichinho Virtual</title>
+    </head>
 
-<body>
-    <div id="block">
-        <div id="imageBlock">
-            <img src="img/azul.jpg" class="pet" id="pet" alt="imagem">
+    <body>
+        <div id="block">
+            <div id="imageBlock">
+                <img src="img/azul.jpg" class="pet" id="pet" alt="imagem">
+            </div>
+            <div class="lado">
+                <h2><strong>Status</strong></h2>
+            </div>
+            Fome: <div id="fome" class="barra">100%</div>
+            Higiene: <div id="higiene" class="barra">100%</div>
+            Sono: <div id="sono" class="barra">100%</div>
+            Diversão: <div id="diversão" class="barra">100%</div>
+            Social: <div id="social" class="barra">100%</div>
+            <div id="ButtBlock">
+                <p><span class="botao" onclick="Alimentar()">Alimentar</span></p>
+                <p><span class="botao" onclick="Limpar()">Limpar</span></p>
+                <p><span class="botao" onclick="Dormir()">Dormir</span></p>
+                <p><span class="botao" onclick="Brincar()">Brincar</span></p>
+                <p><span class="botao" onclick="Conversar()">Conversar</span></p>
+                <p><span class="botao" onclick="Treinar()">Treinar</span></p>
+            </div>
+            <h3>
+                <div id="mensagem"></div>
+            </h3>
         </div>
-        <div class="lado">
-            <h2><strong>Status</strong></h2>
-        </div>
-        Fome: <div id="fome" class="barra">100%</div>
-        Higiene: <div id="higiene" class="barra">100%</div>
-        Sono: <div id="sono" class="barra">100%</div>
-        Diversão: <div id="diversão" class="barra">100%</div>
-        Social: <div id="social" class="barra">100%</div>
-        <div id="ButtBlock">
-            <p><span class="botao" onclick="Alimentar()">Alimentar</span></p>
-            <p><span class="botao" onclick="Limpar()">Limpar</span></p>
-            <p><span class="botao" onclick="Dormir()">Dormir</span></p>
-            <p><span class="botao" onclick="Brincar()">Brincar</span></p>
-            <p><span class="botao" onclick="Conversar()">Conversar</span></p>
-            <p><span class="botao" onclick="Treinar()">Treinar</span></p>
-        </div>
-        <h3><div id="mensagem"></div></h3>
-    </div>
+        <div id="brincarContainer" class="brincarContainer"></div>
+        <script src="script.js"></script>
+    </body>
 
-    <script src="script.js"></script>
-</body>
-
-</html>
+    </html>
