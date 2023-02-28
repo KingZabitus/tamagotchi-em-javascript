@@ -95,7 +95,6 @@ body {
     width: 8rem;
     height: 8rem;
     background-color: #aaa;
-    background-image: url('path/to/pedra.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -108,7 +107,6 @@ body {
     width: 8rem;
     height: 8rem;
     background-color: #aaa;
-    background-image: url('path/to/pedra.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -121,7 +119,6 @@ body {
     width: 8rem;
     height: 8rem;
     background-color: #aaa;
-    background-image: url('path/to/pedra.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
