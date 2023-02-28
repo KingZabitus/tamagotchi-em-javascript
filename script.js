@@ -6,24 +6,24 @@ let social = 100;
 let treino = 0;
 let total = fome + higiene + sono + diversao + social;
 
-//Código relacionado ao minigame de Pedra-Papel-Tesoura
+//Código do minigame de Pedra-Papel-Tesoura
 let choices = ["pedra", "papel", "tesoura"];
 let userChoice = "";
 let resultado = 0;
-let tesoura = document.createElement('button');
-tesoura.innerHTML = "Tesoura";
+let tesoura = document.createElement('img');
+tesoura.src = "img/tesoura.png";
 tesoura.classList.add("botaoDeTesoura");
 tesoura.style.display = "none";
 document.body.appendChild(tesoura);
 
-let pedra = document.createElement('button');
-pedra.innerHTML = "Pedra";
+let pedra = document.createElement('img');
+pedra.src = "img/pedra.png";
 pedra.classList.add("botaoDePedra");
 pedra.style.display = "none";
 document.body.appendChild(pedra);
 
-let papel = document.createElement('button');
-papel.innerHTML = "Papel";
+let papel = document.createElement('img');
+papel.src = "img/papel.png";
 papel.classList.add("botaoDePapel");
 papel.style.display = "none";
 document.body.appendChild(papel);
@@ -41,41 +41,50 @@ function escolher() {
     pedra.style.display = "block";
     papel.style.display = "block";
 
-    tesoura.addEventListener("click", () => {
-        userChoice = "tesoura";
-        pedra.style.display = "none";
-        papel.style.display = "none";
-        tesoura.style.display = "none";
-        computerChoice = choices[Math.floor(Math.random() * choices.length)];
-        resultado = verificarVencedor();
-        diversao = diversao + resultado;
-        document.getElementById("diversão").innerHTML = diversao + '%';
-        document.getElementById("diversão").style.width = diversao + 'px';
-    })
-    pedra.addEventListener("click", () => {
-        userChoice = "pedra";
-        pedra.style.display = "none";
-        papel.style.display = "none";
-        tesoura.style.display = "none";
-        computerChoice = choices[Math.floor(Math.random() * choices.length)];
-        resultado = verificarVencedor();
-        diversao = diversao + resultado;
-        document.getElementById("diversão").innerHTML = diversao + '%';
-        document.getElementById("diversão").style.width = diversao + 'px';
-    })
-    papel.addEventListener("click", () => {
-        userChoice = "papel";
-        pedra.style.display = "none";
-        papel.style.display = "none";
-        tesoura.style.display = "none";
-        computerChoice = choices[Math.floor(Math.random() * choices.length)];
-        resultado = verificarVencedor();
-        diversao = diversao + resultado;
-        document.getElementById("diversão").innerHTML = diversao + '%';
-        document.getElementById("diversão").style.width = diversao + 'px';
-    })
+    tesoura.removeEventListener("click", escolhaTesoura);
+    pedra.removeEventListener("click", escolhaPedra);
+    papel.removeEventListener("click", escolhaPapel);
+
+    tesoura.addEventListener("click", escolhaTesoura);
+    pedra.addEventListener("click", escolhaPedra);
+    papel.addEventListener("click", escolhaPapel);
 }
 
+function escolhaTesoura() {
+    userChoice = "tesoura";
+    pedra.style.display = "none";
+    papel.style.display = "none";
+    tesoura.style.display = "none";
+    computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    resultado = verificarVencedor();
+    diversao = diversao + resultado;
+    document.getElementById("diversão").innerHTML = diversao + '%';
+    document.getElementById("diversão").style.width = diversao + 'px';
+}
+
+function escolhaPedra() {
+    userChoice = "pedra";
+    pedra.style.display = "none";
+    papel.style.display = "none";
+    tesoura.style.display = "none";
+    computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    resultado = verificarVencedor();
+    diversao = diversao + resultado;
+    document.getElementById("diversão").innerHTML = diversao + '%';
+    document.getElementById("diversão").style.width = diversao + 'px';
+}
+
+function escolhaPapel() {
+    userChoice = "papel";
+    pedra.style.display = "none";
+    papel.style.display = "none";
+    tesoura.style.display = "none";
+    computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    resultado = verificarVencedor();
+    diversao = diversao + resultado;
+    document.getElementById("diversão").innerHTML = diversao + '%';
+    document.getElementById("diversão").style.width = diversao + 'px';
+}
 
 function verificarVencedor() {
     alert("Você escolheu " + userChoice + ".\nO computador escolheu " + computerChoice + ".");
